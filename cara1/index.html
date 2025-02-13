@@ -6,10 +6,13 @@
   </head>
   <body>
     <script>
-      let mic=new p5.AudioIn();// guarda a la variable mic una entrada de audio de p5.js
+      let mic;
+
+      
 function setup() {
   createCanvas(windowWidth,windowHeight);
-  mic.start();// activa el micròfon 
+    mic=new p5.AudioIn();// guarda a la variable mic una entrada de audio de p5.js
+    mic.start();// activa el micròfon 
 }
 function draw() {
   let vol=mic.getLevel();
