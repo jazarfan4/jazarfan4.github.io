@@ -17,8 +17,8 @@ function setup() {
 function draw() {
   let vol=mic.getLevel();
   let h=map(vol,0,1,0,800);
-  background(242, 113, 107);
-  fill(245+h, 238, 151+h );
+  background(242, 113, 107+h);
+  fill(245, 238+h, 151 );
   ellipse(windowWidth/2,windowHeight/2,300,300);
   fill(120, 4-h, 73+h );
   ellipse(windowWidth/2-70,windowHeight/2-60,50,50);
