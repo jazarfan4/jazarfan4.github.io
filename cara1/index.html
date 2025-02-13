@@ -6,7 +6,7 @@
   </head>
   <body>
     <script>
-      let mic;
+ let mic;
 
       
 function setup() {
@@ -16,7 +16,7 @@ function setup() {
 }
 function draw() {
   let vol=mic.getLevel();
-  let h=map(vol,0,1,0,400);
+  let h=map(vol,0,1,0,800);
   background(242, 113, 107);
   fill(245, 238, 151 );
   ellipse(windowWidth/2,windowHeight/2,300,300);
