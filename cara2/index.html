@@ -18,7 +18,7 @@ function draw() {
   temblar=random(10,50)
   let vol=mic.getLevel();
   let h=map(vol,0,1,0,800);
-  background(242, 113-h, 107);//color  fons
+  background(242+h, 113-h, 107);//color  fons
   fill(245-h, 238+h, 151 );//color cara
   ellipse(windowWidth/2,windowHeight/2,300+temblar,300+temblar);//cara
   //el primer que hi ha entre parentesis es diu paràmetra i és la posició x del centre de la cara
@@ -29,8 +29,8 @@ function draw() {
   //el quart és l'alçada de la cara
   //temblaresta sumat a l'amplada i l'alçada e la cara i canviara aleatoriament entre 10 i 50pixels
   fill(120+temblar, 4, 73+h*6 );//color ull
-  ellipse(windowWidth/2-70,windowHeight/2-60,50-h,50/2);//ull dret
-  ellipse(windowWidth/2+70,windowHeight/2-60,50-h,50/2);//ull esquerra
+  ellipse(windowWidth/2-70,windowHeight/2-70,50-h,50/2);//ull dret
+  ellipse(windowWidth/2+70,windowHeight/2-70,50-h,50/2);//ull esquerra
   arc(windowWidth/2,windowHeight/2+90,100,50+h,0,PI);//boca
 }
       console.log(h);
