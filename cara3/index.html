@@ -25,7 +25,7 @@ function draw() {
   //entre 0 i 50
   let vol=mic.getLevel();
   let h=map(vol,0,1,0,800);
-  background(242+h+movsinus, 113-h+movsinus, 107+movsinus);//color fons
+  background(242+h, 113-h, 107);//color fons
   fill(245-h, 238+h, 151 );//color cara
   ellipse(windowWidth/2,windowHeight/2,300+temblar,300+temblar);//cara
   //el primer que hi ha entre parentesis es diu paràmetra i és la posició x del centre de la cara
