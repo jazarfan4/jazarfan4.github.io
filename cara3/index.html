@@ -7,7 +7,8 @@
   <body>
     <script>
  let mic;
-
+      let temblar;
+      let sinus;//creem una variable que es diu sinus
       
 function setup() {
   createCanvas(windowWidth,windowHeight);
@@ -15,16 +16,33 @@ function setup() {
     mic.start();// activa el micròfon 
 }
 function draw() {
+  temblar=random(10,50)
+ sinus=(sin(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
+  //frameCount esta contat els fotogrames i fa 60 sinua per segon
+  //això vol dir 60 numeros entre -1 i 1 ordenats per segon
+  let movsinus=map(sinus,-1,1,0,50);
+  //convrteix els numeros entre - 1 i +1 donaran numeros proporcionals
+  //entre 0 i 50
   let vol=mic.getLevel();
   let h=map(vol,0,1,0,800);
-  background(242, 113-h, 107);
-  fill(245-h, 238+h, 151 );
-  ellipse(windowWidth/2,windowHeight/2,300,300);
-  fill(120, 4+h, 73+h );
-  ellipse(windowWidth/2-70,windowHeight/2-60,50,50);
-  ellipse(windowWidth/2+70,windowHeight/2-60,50,50);
-  arc(windowWidth/2,windowHeight/2+90,100,50+h,0,PI);
+  background(242+h+movsinus, 113-h, 107+movsinus);//color  fons
+  fill(245-h, 238+h, 151 );//color cara
+  ellipse(windowWidth/2,windowHeight/2,300+temblar,300+temblar);//cara
+  //el primer que hi ha entre parentesis es diu paràmetra i és la posició x del centre de la cara
+  //windowWidth/2 significa que el centre de la cara coincideix amb el centre de la finestra
+  //el segon paràmetre és la posició y o alçada
+  //windowHeight/2 significa el centre de la cara en alçada i coincideix amb el centre de la cara
+  //el tercer paràmetre és l'amplada de la cara
+  //el quart és l'alçada de la cara
+  //temblaresta sumat a l'amplada i l'alçada e la cara i canviara aleatoriament entre 10 i 50pixels
+  fill(120+temblar, 4, 73+h*6 );//color ull
+  ellipse(windowWidth/2-70,windowHeight/2-60+h,50-h,50/2);//ull dret
+  ellipse(windowWidth/2+70,windowHeight/2-60+h,50-h,50/2);//ull esquerra
+  arc(windowWidth/2,windowHeight/2+90,100,50+h,0,PI);//boca
+    ellipse(windowWidth/2-70+h*5,windowHeight/2-60+h,50-h,50/2);//pupila dreta
+  ellipse(windowWidth/2+70+h*5,windowHeight/2-60+h,50-h,50/2);//pupila esquerra
 }
+      console.log(h);
     </script>
 </body>
 </html>
