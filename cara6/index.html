@@ -10,6 +10,7 @@
     <button onclick="changeBackground();">Canvia Fons</button>
 
     <script>
+       let bgColor;        // Variable per emmagatzemar el color de fons actual.
 let t = 0;
       // Declara i inicialitza la variable 't', que servirà per crear un moviment suau amb 'noise()'.
 let h ;
@@ -53,7 +54,7 @@ let cosinus=cos(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
 //entre 0 50 
   let vol=mic.getLevel();
   let h=map(vol,0,1,0,800);
-  background(bgColor = color(random(100, 255), random(100, 255), random(100, 255)); );// color de fons 
+  background(bgColor);// color de fons 
   fill(movcosinus/2, movcosinus, movsinus);// color cara
   ellipse(mouseX,mouseY,300+noise1,300+noise1);// cara
   // windowWidth/2 significa que el centre de la cara coincideix amb el centre de la finestra
