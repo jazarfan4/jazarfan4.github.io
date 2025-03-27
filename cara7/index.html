@@ -7,12 +7,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
-    <button onclick="changeBackground();">Canvia Fons</button>
-
     <script>
 let t = 0;
       // Declara i inicialitza la variable 't', que servirà per crear un moviment suau amb 'noise()'.
-       let bgColor ;        // Variable per emmagatzemar el color de fons actual.
 let h ;
       let mic;
       let smile=false;
@@ -25,7 +22,6 @@ let h ;
   createCanvas(windowWidth,windowHeight);
         mic=new p5.AudioIn();// guarda a la variable mic una entrada de audio de p5.js
         mic.start();// activa el micròfon
-         bgColor = color(200, 220, 255); // Color de fons inicial (un blau clar).
 }
 function draw() {
    t += 0.01;
@@ -55,7 +51,7 @@ let cosinus=cos(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
 //entre 0 50 
   let vol=mic.getLevel();
   let h=map(vol,0,1,0,800);
-  background(bgColor);// color de fons 
+  background(255-noise3, 115+movsinus, noise3 );// color de fons 
   fill(movcosinus/2, movcosinus, movsinus);// color cara
   ellipse(mouseX,mouseY,300+noise1,300+noise1);// cara
   // windowWidth/2 significa que el centre de la cara coincideix amb el centre de la finestra
@@ -72,12 +68,6 @@ let cosinus=cos(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
   arc(mouseX,mouseY+90,100,50+h,0,PI);// boca cap avall
    }else{
    arc(mouseX,mouseY+90,100,50+h,0,PI);// boca cap avall  
- noStroke();
-   fill(254, 254, 254 );//color blanc de les alaes
-  ellipse(60,40,15,15);//ala  balnca de la dreta
-   ellipse(40,60,15,15);//ala blanca de l'esquerra
-    fill(4, 4, 5 );//color negre
-   ellipse(noiseX,noiseY,30,20);//cos del mosquit negre de forma odona 20 pixelsi 20 pixels alt i situat a 50 pixsels de la cantonada superior esquerra
    }
    }
 
@@ -92,13 +82,6 @@ let cosinus=cos(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
         {
           smile=!smile;}
          }
-      /* Funció per canviar el color de fons:
-       Utilitza random() per generar components RGB aleatoris dins d'un interval.
-       Aquesta funció es crida en prémer el botó "Canvia Fons". */
-    function changeBackground() {
-      bgColor = color(random(100, 255), random(100, 255), random(100, 255));
-    }
-
     
     </script>
 </body>
