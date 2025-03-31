@@ -66,8 +66,8 @@ let cosinus=cos(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
   ellipse(mouseX+70,mouseY-60-h,50,50+h+noise2);// ull esquerra
   strokeWeight(5);
   noFill();
-  line(windowWidth/2-90,windowHeight/2-110,windowWidth/2-20,windowHeight/2-110);
-  arc(mouseX,mouseY+100,110,50+h,0,PI);
+  arc(mouseX,mouseY+100,110,50+h,0,PI);//ceja izquierda
+  arc(mouseX,mouseY+110,100,50+h,PI,0);//ceja derrecha
  if (smile){
   arc(mouseX,mouseY+90,100,50+h,0,PI);// boca cap avall
    }else{
