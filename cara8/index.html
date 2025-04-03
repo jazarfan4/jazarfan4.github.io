@@ -80,8 +80,8 @@ let cosinus=cos(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
 function mosca(x, y , w, h ){
 //  let posiciox=random(0,400).
   //  let posicioy=random(0,200).
-  let posicionx = 100 * noise(0.005 * frameCount);
-  let posicioy = 100 * noise(0.005 * frameCount + 10000);
+  let posicionx = 100 * noise(0.05 * frameCount);
+  let posicioy = 100 * noise(0.05 * frameCount + 10000);
 
   fill(255);//color blanc
   ellipse(x+posiciox,50, w, h);//ala esquerra
