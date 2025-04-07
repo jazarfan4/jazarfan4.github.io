@@ -68,6 +68,8 @@ let cosinus=cos(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
   noFill();
  line(windowWidth/2-100,windowHeight/2+90,windowWidth/2-100,windowHeight/2+90)
   arc(mouseX,mouseY+100,110,50+h,0,PI);//ceja izquierda
+           arc(mouseX,mouseY-100,110,50-h,0,PI);//ceja izquierda
+           
           mosca(50,50,20,30);frameRate(10);
           mosca(70,40 ,20 ,30);
  
@@ -77,7 +79,7 @@ let cosinus=cos(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
    arc(mouseX+90,mouseY-100,80,30+h,PI,0);// boca cap avall  
    }
    }
-function mosca(x, y , ample, alt ){
+function mosca(posiciox, posicioy , ample, alt ){
 //  let posiciox=random(0,400).
   //  let posicioy=random(0,200).
   //ample:20 , i alt:30
