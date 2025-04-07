@@ -85,12 +85,12 @@ function mosca(x, y , ample, alt ){
   let posicioy = 100 * noise(0.05 * frameCount + 10000);
 
   fill(255);//color blanc
-  ellipse(x+posiciox,50, w, h);//ala esquerra
+  ellipse(x+posiciox,50, ample, alt);//ala esquerra
   //50 es x i 50 es y 
   //w es 20 i h es 30
-  ellipse(x+30+posiciox,50, w, h);//ala dreta
+  ellipse(x+30+posiciox,50, ample, alt);//ala dreta
   fill(0)//color negre
-  ellipse(65+posiciox,y+posiciox,25,30);
+  ellipse(65+posiciox,y+posiciox,ample ,alt);
    }
   
       function keyPressed(){
