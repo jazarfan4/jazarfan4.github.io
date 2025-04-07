@@ -77,10 +77,11 @@ let cosinus=cos(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
    arc(mouseX+90,mouseY-100,80,30+h,PI,0);// boca cap avall  
    }
    }
-function mosca(x, y , w, h ){
+function mosca(x, y , ample, alt ){
 //  let posiciox=random(0,400).
   //  let posicioy=random(0,200).
-  let posicionx = 100 * noise(0.05 * frameCount);
+  //ample:20 , i alt:30
+  let posiciox = 100 * noise(0.05 * frameCount);
   let posicioy = 100 * noise(0.05 * frameCount + 10000);
 
   fill(255);//color blanc
