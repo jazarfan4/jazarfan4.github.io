@@ -24,6 +24,7 @@ let h ;
         mic.start();// activa el micròfon
 }
         function draw() {
+          let parpelleig = frameCount % 60 < 5;
    t += 0.01;
         // Incrementa la variable 't' per fer que el 'noise()' canviï progressivament.
 
@@ -51,6 +52,7 @@ let cosinus=cos(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
 //entre 0 50 
   let vol=mic.getLevel();
   let h=map(vol,0,1,0,800);
+      
   background(255-noise3, 115+movsinus, noise3 );// color de fons 
   fill(movcosinus/2, movcosinus, movsinus);// color cara
   ellipse(mouseX,mouseY,300+noise1,300+noise1);// cara
