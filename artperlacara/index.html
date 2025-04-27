@@ -74,6 +74,81 @@
     <1--Pantalla de càrerga:s'exsibeix mentre es carreguen els models de detecció facial-->
       <div id="loading-screen">
         <div class="loader"></div>
-        <!--Element visual
+        <!--Element visual que gira per mostrar que s'està carregant-->
+        <p>Carregant models, si us plau, espera...</p>
+        <!--Missatge per informar a l'usuari que s'sestà carregant el model-->
+      </div>
+      
+      <script>
+        /*Inici del codi JavaScript*/
+
+        //Declarem varables globals utilitzades en el codi
+        let faceapi;
+        //Aquesta variable emmegetzemarà el model de detecció facial de ml5.js
+
+        let detections=[];
+        //Array on es guardaran els resultats (deteccions) que ens proporciona el model facial
+
+        let video;
+        //Variable que guardarà la captura de vídeo de la càmera
+
+        let modelsMostrats=false;
+        //Variable booleana per controlar si ja s'ha amagat la pantalla de càrrega
         
+        // Variables per a la mida de la mini imatge de la cara que es mostrarà
+        const miniWidth=120;
+        const miniHeigth=120;
+
+        //Funció set up de p5.js, spexecuta una vegada al principi
+        function setup(){
+          //Creem un canvas(llindar per dibuixos) de 6000x600 píxels
+          //creatCanvas(600,600);
+
+          creacteCanvas(windowWidth,windowHeight);//Canvi aquí
+
+          //Iniciem la captura de vídeo des de la càmera de l'usuari
+          video=crateCapture(VIDEO);
+          video.size(480,480);
+          //Es defineix la mida del vídeo
+          video.hide();
+          //Amaguem el vídeo perquè només s'utilitzi per processar la imatge, no per mostrar-lo directament
+
+          //Opicions per a la detecció facial (configuració del model)
+          const faceOptions={
+            withLandemarks: true,//Detecta els punts claus de la cara(ulls, nas, boca,etc.)
+            withExpressions: true,//Detecta les expressions facials(felicitat, tristesa, etc.)
+            withDescriptors: false,//No sol·licita descriptors facials(informació per reconèixer cares)
+            minConfidence: 0.5 //Nivell mínim de certesa per considerar una detecció valida
+          };
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+        
+      </script>
   </body>
