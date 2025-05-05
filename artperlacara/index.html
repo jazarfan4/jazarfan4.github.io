@@ -45,7 +45,7 @@
         color: #33;
         /*Es col·loca per sobre de tot el contingut(amb índex z alt)*/
       }
-        .oader{
+        .loader{
           width: 50px;
           height: 50px;
           border: 6px solid#3498db;
@@ -120,6 +120,66 @@
             withDescriptors: false,//No sol·licita descriptors facials(informació per reconèixer cares)
             minConfidence: 0.5 //Nivell mínim de certesa per considerar una detecció valida
           };
+
+          //Inicialitza el model de detecció facial amb el vídeo i les opcions definides
+          faceapi= ml5.faceapi(video,faceOptions,faceReady);
+          //Quan el model estigui preparat,es cridarà la funció faceReady
+        }
+        //Funció que s'executa quan el model de detecció facial està llest 
+        function faceReady(){
+        faceapi.detect(gotFaces);
+        //Inicia la detecció facial cridant la funció gotFaces quan es completen les deteccions
+        }
+       function windowResized(){
+         resizeCanvas (windowWidth,windowHeight);//Nova funció per adaptar el canva
+       }
+
+        //Funció que s'executa cada cop que ml5.js téles deteccions d'una cara
+        function gotFaces(error,result){
+          if(error){
+            console.error(error)
+            //En cas d'error, s'imprimeix a la consola i es deté l'execució
+            return;
+          }
+
+          detections= result;
+          //Guarda el resultat de les deteccions(poden der múltioles cares, però en aquest cas s'utilitza la `primera)
+
+          if(!modelsMostrats){
+            //Si encara no s'ha amagat la pantalla de càrrega...
+            document.getElementById ("loading-screen").style.display="none";
+            //... amaguem l'element amb id "loading-screen"
+            modelsMostrats=true
+            //Actualitzem la variable perquè no es torni a amagar més tard(ja ho hem fet)
+          }
+          //Torna a iniciar la detecció facial de forma contínua
+          faceapi.detect(gotFaces);
+        }
+
+        //Funció draw de p5.js, s'executa moltes vegades per segon per actualitzar la pantalla
+        function draw(){
+          //Es pinta el fons de color blanc cada que es redibuixa el canvas 
+          background(255);
+
+          //Variables per emmagatzemar el sentiment (expressió facial) i la  seva intensitat
+          let dominant = "neutre";
+          let intensity = 0;
+
+          //Si hi ha deteccions i almenys una cara 
+          if(detections&&detections.length>0){
+            //Es recuperen les expressions;
+            let expr = detections quina és l'exprexxió dominant
+              intensity = expr[dominant];
+          }
+
+          //Es dibuixa art geomètric diferent segons el sentiment detectat
+          drawDifferenrArt(dominant,intensity);
+
+          //Dibuixa un text amb el nom de l'expressió facial a la part superior del canvas
+          noStroke();
+          fill(44,169,255);
+          
+            
 
           
 
