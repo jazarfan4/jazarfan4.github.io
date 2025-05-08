@@ -191,7 +191,15 @@
         }
 
         //Funció per dibuixar art geomètric en funció de l'expressió facial detectada
-        function drawDifferentArt(dominant,intensity)
+        function drawDifferentArt(dominant,intensity){
+          push();//Guarda l'estat actual de les transformacions gràfiques
+
+          translate(width/2,heigth/2);
+          //Trasllada l'origen del sistema de coordenades al centre del canvas
+
+          noFill();
+
+          //Es desactiva rl farcit(no es pinta amb color les formes interiors)
             
           
             
