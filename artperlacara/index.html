@@ -218,6 +218,32 @@
               case"sad":
               //Cas:expressió "sad"(trist) es dibuixen línies verticals
               stroke(50,100,200,150);
+              / Traç amb un color blau fosc translúcid
+for (let x=-200; x< <= 200, x += 40) {
+// Dibuixa línies verticals espaiades cada 40 píxels des del -200 fins al 200 en l'eix X line(x,-200,x,200);
+}
+break;
+case "angry":
+// Cas: expressió "angry" (enfadat) --> dibuix d'un zigzag agressiu
+stroke(200,0,0,150);
+// Traç de color vermell amb certa transparència
+beginShape();
+// Inicia la definició d'una forma comprexa definidad per diversos vèrtexs
+for (let x = -250; x<= 250; x= 20) {
+// Recorre l'eix X des de -250 fins a 250 amb increments de 20 píxels
+let y = (x % 40 === 0) ? -150 : 150;
+// Altera el valor de y entre -150 i 150 per crear efecte zigzag (la condició mira si x és múltiple de 40)
+vertex(x, y * intensity);
+// Es posa un punt a la forma amb la coordenada (x, y ajustada per la intensitat)
+}
+endShape();
+// Acaba la definició de la forma complexa
+break;
+            case "surprised":
+              //Cas:expressió "surprised"( sobtada) cercles concèntrics amb petites variacions
+              stroke(0,150,255,150);
+              //Traç de color blau clar amb transparència
+              
               
     
 
