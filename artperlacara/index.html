@@ -198,33 +198,30 @@
           //Trasllada l'origen del sistema de coordenades al centre del canvas
 
           noFill();
-
           //Es desactiva rl farcit(no es pinta amb color les formes interiors)
             
-          
-            
+          strokeWeight(4);
+          //Defineix l'amplada del traç(línia de dibuix) en 4 píxels
 
-          
+          //Utilitza una estructura switch per triar el dibuix en funció del sentiment detectat
+          switch(dominant)
+          case"happy":
+              //Cas:expressió "happy" (feliç) es dibuixen ones radicals
+              for(let i =1;i<= 10; i ++){
+                //Es recorre des de 1 fins a 10 per dibuixar cercles creixents
+                stroke(random(200,255),random(200,255),0,150);
+                //Cada cercle té un traç amb tonalitats grogues(el color és aleatori entre 200 i 255 per verd i vermell)
+                ellipse(0,0 i *20*intensity, i *20* intensity)=;
+                //Dibuixa una el·lipse centrada, amb mida en funció del número d'ineració i la intensidad de l'expressió
+              }
+              break;
+              case"sad":
+              //Cas:expressió "sad"(trist) es dibuixen línies verticals
+              stroke(50,100,200,150);
+              
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 
