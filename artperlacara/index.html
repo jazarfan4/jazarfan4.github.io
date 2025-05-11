@@ -257,10 +257,30 @@ break;
               beginShape();
               for(let x =-250;x<= 250; x += 15){
                 //Recorre l'eix X amb increments de 15 píxels
-
-
-          
-
+                let y =random(-50,50)*intensity;
+                //La coordenada y és un valor aleatori(multiplicat per la intensitat)
+                vertex(x,y);
+                //Afegeix aquest punt a la forma abstracta
+              }
+              endShape();
+              break;
+            default:
+              //Cas per a l'estat "neutre" o qualsevol altre que no coincideixi amb els casos anteriors
+              //Dibuixa una quadrícula simple
+              stroke(150,150,150,150);
+              //Trç de color gris per a la quadrícula
+              for(let i=-200;i<=200;i+=40){
+                for(let j =-200;j<=200;j+=200){
+                  react(i,j,30,30);
+                  //Dibuixa petits quadrats de 30x30 píxels en cada intersecció de la quadrícula
+                }
+              }
+          }
+          pop();
+          //Restaura l'estat de les transformacions gràfiques al que era abans de fer el translate i altres canvis
+        }
+        /*Fi del codi JavaScript*/
         
       </script>
   </body>
+</html>
