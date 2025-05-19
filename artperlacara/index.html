@@ -152,7 +152,7 @@
 
       switch (dominant) {
         case 'happy':
-          stroke(255,200,0); // groc
+          stroke(255,200,0+intensity); // groc
           beginShape();//Ojo izquierdo
 vertex(191, 211.1875);
 vertex(197, 216.1875);
@@ -265,6 +265,47 @@ vertex(133, 221.1875);
 vertex(134, 212.1875);
 vertex(137, 205.1875);
 endShape(CLOSE);
+          beginShape();//Labio inferior
+vertex(189, 360.1875);
+vertex(190, 371.1875);
+vertex(196, 378.1875);
+vertex(205, 383.1875);
+vertex(215, 385.1875);
+vertex(216, 385.1875);
+vertex(224, 385.1875);
+vertex(235, 382.1875);
+vertex(241, 378.1875);
+vertex(241, 378.1875);
+vertex(248, 375.1875);
+vertex(256, 370.1875);
+vertex(245, 372.1875);
+vertex(236, 372.1875);
+vertex(226, 371.1875);
+vertex(217, 368.1875);
+vertex(209, 367.1875);
+vertex(203, 364.1875);
+vertex(198, 362.1875);
+vertex(189, 360.1875);
+endShape(CLOSE);
+          beginShape();//Labio superior
+vertex(191, 357.1875);
+vertex(199, 359.1875);
+vertex(207, 359.1875);
+vertex(215, 362.1875);
+vertex(227, 364.1875);
+vertex(235, 367.1875);
+vertex(244, 369.1875);
+vertex(250, 370.1875);
+vertex(242, 364.1875);
+vertex(234, 360.1875);
+vertex(225, 357.1875);
+vertex(216, 354.1875);
+vertex(208, 353.1875);
+vertex(201, 349.1875);
+vertex(195, 349.1875);
+vertex(187, 350.1875);
+vertex(186, 352.1875);
+          endShape(CLOSE);
           break;
 
         case 'sad':
