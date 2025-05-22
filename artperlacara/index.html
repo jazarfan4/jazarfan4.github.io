@@ -154,6 +154,7 @@ text("Intensitat:"+ Math.round(intensity *100)+"%",width/2+112,10)
       switch (dominant) {
         case 'happy':
           stroke(255,200,0+intensity); // groc
+          fill();
            beginShape();//Ojo izquierdo
 vertex(138, 201.1875);
 vertex(140, 196.1875);
@@ -167,6 +168,7 @@ vertex(148, 206.1875);
 vertex(142, 206.1875);
 vertex(137, 202.1875);
 endShape(CLOSE);
+          fill(255, 250, 239);
           beginShape();//Ojo derecho
 vertex(191, 211.1875);
 vertex(197, 216.1875);
@@ -179,7 +181,8 @@ vertex(211, 202.1875);
 vertex(205, 202.1875);
 vertex(198, 203.1875);
 vertex(193, 208.1875);
-  endShape(CLOSE);    
+  endShape(CLOSE);  
+          fill(255, 250, 239)
           beginShape();//Nariz
 vertex(186, 266.1875);
 vertex(176, 266.1875);
@@ -397,6 +400,22 @@ vertex(411, 561.1875);
 vertex(413, 568.1875);
 vertex(416, 583.1875);
            endShape(CLOSE);
+          beginShape();//Pendiente
+vertex(298, 279.1875);
+vertex(295, 289.1875);
+vertex(290, 299.1875);
+vertex(287, 309.1875);
+vertex(291, 315.1875);
+vertex(294, 318.1875);
+vertex(300, 319.1875);
+vertex(305, 318.1875);
+vertex(310, 315.1875);
+vertex(312, 306.1875);
+vertex(311, 299.1875);
+vertex(309, 293.1875);
+vertex(303, 288.1875);
+vertex(299, 281.1875);
+ endShape(CLOSE);
           break;
 
         case 'sad':
@@ -643,6 +662,22 @@ vertex(411, 561.1875);
 vertex(413, 568.1875);
 vertex(416, 583.1875);
            endShape(CLOSE);
+          beginShape();//Pendiente
+vertex(298, 279.1875);
+vertex(295, 289.1875);
+vertex(290, 299.1875);
+vertex(287, 309.1875);
+vertex(291, 315.1875);
+vertex(294, 318.1875);
+vertex(300, 319.1875);
+vertex(305, 318.1875);
+vertex(310, 315.1875);
+vertex(312, 306.1875);
+vertex(311, 299.1875);
+vertex(309, 293.1875);
+vertex(303, 288.1875);
+vertex(299, 281.1875);
+          endShape(CLOSE);
           break;
 
         case 'angry':
@@ -805,6 +840,22 @@ vertex(411, 561.1875);
 vertex(413, 568.1875);
 vertex(416, 583.1875);
            endShape(CLOSE);
+          beginShape();//Pendiente
+vertex(298, 279.1875);
+vertex(295, 289.1875);
+vertex(290, 299.1875);
+vertex(287, 309.1875);
+vertex(291, 315.1875);
+vertex(294, 318.1875);
+vertex(300, 319.1875);
+vertex(305, 318.1875);
+vertex(310, 315.1875);
+vertex(312, 306.1875);
+vertex(311, 299.1875);
+vertex(309, 293.1875);
+vertex(303, 288.1875);
+vertex(299, 281.1875);
+          endShape(CLOSE);
           break;
 
         case 'fearful':
@@ -1011,6 +1062,22 @@ vertex(411, 561.1875);
 vertex(413, 568.1875);
 vertex(416, 583.1875);
           endShape(CLOSE);
+          beginShape();//Pendiente
+vertex(298, 279.1875);
+vertex(295, 289.1875);
+vertex(290, 299.1875);
+vertex(287, 309.1875);
+vertex(291, 315.1875);
+vertex(294, 318.1875);
+vertex(300, 319.1875);
+vertex(305, 318.1875);
+vertex(310, 315.1875);
+vertex(312, 306.1875);
+vertex(311, 299.1875);
+vertex(309, 293.1875);
+vertex(303, 288.1875);
+vertex(299, 281.1875);
+ endShape(CLOSE);
           break;
 
         case 'surprised':
@@ -1172,12 +1239,27 @@ vertex(411, 561.1875);
 vertex(413, 568.1875);
 vertex(416, 583.1875);
            endShape(CLOSE);
+          beginShape();//Pendiente
+vertex(298, 279.1875);
+vertex(295, 289.1875);
+vertex(290, 299.1875);
+vertex(287, 309.1875);
+vertex(291, 315.1875);
+vertex(294, 318.1875);
+vertex(300, 319.1875);
+vertex(305, 318.1875);
+vertex(310, 315.1875);
+vertex(312, 306.1875);
+vertex(311, 299.1875);
+vertex(309, 293.1875);
+vertex(303, 288.1875);
+vertex(299, 281.1875);
+ endShape(CLOSE);
           break;
 
         case 'disgusted':
           stroke(0,150,0,150); // verd
           beginShape();
-        
            vertex(191, 211.1875);
 vertex(197, 216.1875);
 vertex(206, 220.1875);
@@ -1379,6 +1461,22 @@ vertex(411, 561.1875);
 vertex(413, 568.1875);
 vertex(416, 583.1875);
           endShape(CLOSE);
+          beginShape();//Pendiente
+vertex(298, 279.1875);
+vertex(295, 289.1875);
+vertex(290, 299.1875);
+vertex(287, 309.1875);
+vertex(291, 315.1875);
+vertex(294, 318.1875);
+vertex(300, 319.1875);
+vertex(305, 318.1875);
+vertex(310, 315.1875);
+vertex(312, 306.1875);
+vertex(311, 299.1875);
+vertex(309, 293.1875);
+vertex(303, 288.1875);
+vertex(299, 281.1875);
+ endShape(CLOSE);
           break;
 
         default:
