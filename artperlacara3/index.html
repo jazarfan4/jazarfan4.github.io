@@ -347,8 +347,8 @@
         // Extreu la clau "dominant" de l'objecte currentExpression (indicant l'emoció més forta).
         const t = frameCount * 0.05;
         // "t" és una variable que canvia amb el temps per animar els moviments, depenent del nombre de frames.
-        const centerX = 0;
-        const centerY = 0;
+        const centerX = width/2;
+        const centerY = heigth/2;
         // Com que hem traslladat el sistema de coordenades al centre, (0,0) és el centre.
         const baseSize = 200 * smoothIntensity;
         // Defineix una mida base per al dibuix que depèn de la intensitat suau interpolada.
@@ -657,6 +657,18 @@ vertex(250, 341.1875);
 vertex(236, 350.1875);
 vertex(233, 354.1875);
 vertex(226, 356.1875);
+endShape(CLOSE);
+            beginShape();//Oreja
+vertex(302, 239.1875);
+vertex(296, 254.1875);
+vertex(289, 267.1875);
+vertex(289, 274.1875);
+vertex(294, 275.1875);
+vertex(304, 273.1875);
+vertex(312, 267.1875);
+vertex(316, 258.1875);
+vertex(312, 250.1875);
+vertex(302, 238.1875);
 endShape(CLOSE);
             // Tanca la forma, connectant el darrer vertex amb el primer per completar el contorn
             break;
