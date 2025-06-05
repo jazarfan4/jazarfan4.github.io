@@ -678,6 +678,8 @@ endShape(CLOSE);
 
           case 'sad':
             // Cas per a l'emoció "sad" (trist)
+             push();
+            translate(width/2,height/2);
             stroke(70, 130, 230);
             // Contorn amb un to blau moderat (RGB: 70, 130, 230)
             fill(100, 180, 255, 100 * smoothIntensity);
@@ -1063,9 +1065,11 @@ vertex(357, 121.1875);
 vertex(355, 95.1875);
 endShape(CLOSE);
           break;
-
+ pop();
           case 'angry':
             // Cas per a l'emoció "angry" (enfadat)
+             push();
+            translate(width/2,height/2);
             stroke(200, 50, 50);
             // Defineix el contorn en vermell intens (RGB: 200, 50, 50)
             fill(255, 100, 100, 200 * smoothIntensity);
@@ -1451,9 +1455,11 @@ vertex(357, 121.1875);
 vertex(355, 95.1875);
 endShape(CLOSE);
             break;
-
+            pop();
           case 'surprised':
             // Cas per a l'emoció "surprised" (sorprès)
+             push();
+            translate(width/2,height/2);
             stroke(100, 200, 255);
             // Defineix el contorn amb un blau cel (RGB: 100, 200, 255)
             fill(200, 240, 255, 150 * smoothIntensity);
@@ -1840,9 +1846,11 @@ vertex(357, 121.1875);
 vertex(355, 95.1875);
 endShape(CLOSE);
             break;
-
+  pop();
           case 'disgusted':
             // Cas per a l'emoció "disgusted" (fastiguejat)
+             push();
+            translate(width/2,height/2);
             stroke(100, 150, 50);
             // Defineix el contorn amb un to verd fosc (RGB: 100, 150, 50)
             fill(150, 200, 100, 150 * smoothIntensity);
@@ -2228,7 +2236,7 @@ vertex(357, 121.1875);
 vertex(355, 95.1875);
 endShape(CLOSE);
             break;
-
+  pop();
           default:
             // Cas per a qualsevol altra emoció (inclòs 'neutral')
             stroke(150);
