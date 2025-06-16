@@ -141,6 +141,7 @@
         // Aquesta funció rep com a paràmetre l'emoció i retorna un objecte amb dos colors: start i end.
         switch (emotion) {
           case 'happy':
+            translate(0,0);
             return { start: color(255, 223, 186), end: color(255, 183, 77) };
             // Per l'emoció "happy", s'utilitzen tons càlids i suaus (taronges i taronja clar).
           case 'sad':
